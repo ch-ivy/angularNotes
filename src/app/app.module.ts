@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { DetailsComponent } from './details/details.component';
+import { EmployeeServiceService } from './employee-service.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +17,10 @@ import { DetailsComponent } from './details/details.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
